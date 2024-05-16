@@ -38,6 +38,7 @@ $posts = getAllPosts();
                     <td><?php echo $post['created_at']; ?></td>
                     <td>
                         <a href="single_post.php?id=<?php echo $post['id']; ?>" class="btn btn-info">View</a>
+                        <!-- Only visible for Admin -->
                         <?php if($isAdmin): ?> 
                             <a href="edit_post.php?id=<?php echo $post['id']; ?>" class="btn btn-success">Edit</a>
                             <a href="delete_post.php?id=<?php echo $post['id']; ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this post?')">Delete</a>
